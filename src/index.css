@@ -1,0 +1,4 @@
+@import '~antd/dist/antd.css';
+.ant-collapse-header,.ant-collapse-content-box,.ant-timeline-item-content{
+    text-align: left!important;
+}
