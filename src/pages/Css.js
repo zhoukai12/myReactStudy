@@ -4,7 +4,25 @@ import { Collapse ,Icon} from 'antd';
 const { Panel } = Collapse;
 
 const List=[
-    {title:'asd',text:'trs',href:'https://www.baidu.com/s?wd=es6%E5%88%B6%E8%A1%A8%E7%AC%A6&rsv_spt=1&rsv_iqid=0xf14a7ce90001e7b8&issp=1&f=8&rsv_bp=1&rsv_idx=2&ie=utf-8&rqlang=cn&tn=baiduhome_pg&rsv_enter=1&rsv_dl=tb&oq=%25E4%25BA%258C%25E4%25B8%2589%25E5%2588%25B6%25E8%25A1%25A8%25E7%25AC%25A6&rsv_t=9038GzInaORmMlx44z0wWac7A%2FQ9060Wq0GRcBEhLXJoaIp3gUMHpY42u%2FUeOWltjy%2Bh&inputT=1001&rsv_pq=bc2a304d00029fe6&rsv_sug3=18&rsv_sug2=0&rsv_sug4=1001'},
+    {title:'移动端适配rem',text:`<script>
+    //屏幕适应
+    (function (win, doc) {
+        if (!win.addEventListener) return;
+        var html = document.documentElement;
+        function setFont() {
+            var html = document.documentElement;
+            var k = 640;
+            html.style.fontSize = html.clientWidth / k * 100 + "px";
+        }
+        setFont();
+        setTimeout(function () {
+            setFont();
+        }, 300);
+        doc.addEventListener('DOMContentLoaded', setFont, false);
+        win.addEventListener('resize', setFont, false);
+        win.addEventListener('load', setFont, false);
+    })(window, document);
+</script>`,href:'https://tgideas.qq.com/doc/frontend/spec/m/layout.html'},
     {title:'asd',text:'trs',href:'https://www.cnblogs.com/newze/p/7535470.html'},
     {title:'asd',text:'trs',href:'https://www.cnblogs.com/zhaoxinmei-123/p/8927259.html'}
 ];
@@ -30,7 +48,7 @@ class Css extends Component{
                         List.map((item,index)=>{
                             return(
                                 <Panel header={item.title} key={index} extra={genExtra(item.href)}>
-                                    <p>{item.text}</p>
+                                    <pre>{item.text}</pre>
                                 </Panel>
                             )
                         })
