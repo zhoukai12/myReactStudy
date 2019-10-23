@@ -5,6 +5,7 @@ import Html from './pages/Html'
 import Css from './pages/Css'
 import Js from './pages/Js'
 import Study from './pages/Study'
+import ReactStudy from './pages/ReactStudy'
 const { Header, Content, Footer, Sider } = Layout;
 
 
@@ -12,6 +13,7 @@ const List=[
     {path:'/',title:'Html资料',exact: true,component:Html},
     {path:'/css/',title:'Css资料',exact: false,component:Css},
     {path:'/js/',title:'Js资料',exact: false,component:Js},
+    {path:'/react/',title:'React资料',exact: false,component:ReactStudy},
     {path:'/my/',title:'myDateStudy',exact: false,component:Study},
 ];
 
