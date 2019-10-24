@@ -57,6 +57,13 @@ componentWillUnMount
         href: 'https://www.bilibili.com/video/av51455080/?p=20'
     },
     {
+        title: 'react请求接口数据',
+        text: `
+在componentDidMount中使用
+        `,
+        href: 'https://www.bilibili.com/video/av51455080/?p=23'
+    },
+    {
         title: 'react坑',
         text: `
 代码注释 ： {/* 我是react注释 */}
